@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class Task {
+    let text: String
+    let deadline: Date
+    
+    init(text: String, deadline: Date) {
+        self.text = text
+        self.deadline = deadline
+    }
+    
+    //
+    init(from dictionary: [String: Any]) {
+        self.text = dictionary["text"] as! String
+        self.deadline = dictionary["deadline"] as! Date
+    }
+}
