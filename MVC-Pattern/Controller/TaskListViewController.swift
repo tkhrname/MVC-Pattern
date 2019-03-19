@@ -34,7 +34,10 @@ class TaskListViewController: UIViewController {
     }
     
     @objc func barButtonTapped(_ sender: UIBarButtonItem) {
-        
+        // タスク作成画面へ遷移
+        let controller = CreateTaskViewController()
+        let navi = UINavigationController(rootViewController: controller)
+        self.present(navi, animated: true, completion: nil)
     }
     
 }
@@ -42,11 +45,18 @@ class TaskListViewController: UIViewController {
 extension TaskListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.dataSource.count()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 68.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TaskListCell else { return UITableViewCell() }
+        let task = self.dataSource.data(at: indexPath.row)
+        cell.task = task
+        return cell
     }
     
 }
