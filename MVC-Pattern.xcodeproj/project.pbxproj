@@ -17,6 +17,8 @@
 		6D6DDE26223505F000D26EF4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DDE25223505F000D26EF4 /* Task.swift */; };
 		6D6DDE292236ABD100D26EF4 /* TaskDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DDE282236ABD100D26EF4 /* TaskDataSourse.swift */; };
 		6D6DDE2B2236AD3700D26EF4 /* TaskListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DDE2A2236AD3700D26EF4 /* TaskListCell.swift */; };
+		6D6DDE862239273600D26EF4 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DDE852239273600D26EF4 /* TaskListViewController.swift */; };
+		6D6DDE8822411F3600D26EF4 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6DDE8722411F3600D26EF4 /* CreateTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		6D6DDE25223505F000D26EF4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		6D6DDE282236ABD100D26EF4 /* TaskDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataSourse.swift; sourceTree = "<group>"; };
 		6D6DDE2A2236AD3700D26EF4 /* TaskListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCell.swift; sourceTree = "<group>"; };
+		6D6DDE852239273600D26EF4 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		6D6DDE8722411F3600D26EF4 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 		6D6DDE22223505C800D26EF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6D6DDE852239273600D26EF4 /* TaskListViewController.swift */,
+				6D6DDE8722411F3600D26EF4 /* CreateTaskViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +300,8 @@
 				6D6DDE292236ABD100D26EF4 /* TaskDataSourse.swift in Sources */,
 				6D6DDE26223505F000D26EF4 /* Task.swift in Sources */,
 				6D6DDDF5223505A200D26EF4 /* AppDelegate.swift in Sources */,
+				6D6DDE862239273600D26EF4 /* TaskListViewController.swift in Sources */,
+				6D6DDE8822411F3600D26EF4 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
