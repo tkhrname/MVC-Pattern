@@ -70,6 +70,18 @@ class CreateTaskView: UIView {
         self.delegate?.createView(saveButtonDidTap: self)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.taskTextField.frame = CGRect(x: bounds.origin.x + 30, y: bounds.origin.y + 30, width: bounds.size.width - 60, height: 50)
+        
+        self.deadlineTextField.frame = CGRect(x: self.taskTextField.frame.origin.x, y: self.taskTextField.frame.maxY + 30, width: self.taskTextField.frame.size.width, height: self.taskTextField.frame.size.height)
+        
+        let saveButtonSize = CGSize(width: 100, height: 50)
+        self.saveButton.frame = CGRect(x: (bounds.size.width - saveButtonSize.width) / 2, y: self.deadlineTextField.frame.maxY + 20, width: saveButtonSize.width, height: saveButtonSize.height)
+        
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
