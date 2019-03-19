@@ -59,12 +59,17 @@ class CreateTaskView: UIView {
     }
     
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
-        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let deadlineText = dateFormatter.string(from: sender.date)
+        self.deadlineTextField.text = deadlineText
+        self.delegate?.createView(deadlineEditting: self, deadline: sender.date)
     }
     
     @objc func saveButtonTapped(_ sender: UIButton) {
-        
+        self.delegate?.createView(saveButtonDidTap: self)
     }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
