@@ -82,15 +82,11 @@ class CreateTaskView: UIView {
         
     }
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-    }
-    */
-
 }
 
 extension CreateTaskView: UITextFieldDelegate {
-    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        delegate?.createView(taskEditting: self, text: textField.text ?? "")
+        return true
+    }
 }
